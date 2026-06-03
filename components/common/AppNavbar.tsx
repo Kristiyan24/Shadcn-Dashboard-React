@@ -6,15 +6,18 @@ import { Button } from "../ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import { LogOut, Moon, Settings, SquareMenu, Sun, User } from "lucide-react";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "../ui/dropdown-menu";
-import { SidebarTrigger } from "../ui/sidebar";
+import { SidebarTrigger, useSidebar } from "../ui/sidebar";
 
 export default function AppNavbar() {
     const { theme, setTheme } = useTheme()
+    // const { toggleSidebar } = useSidebar()
 
     return(
         <nav  className="p-4 flex items-center justify-between">
             {/* LEFT */}
             <SidebarTrigger/>
+            {/* <Button variant="outline" onClick={toggleSidebar}>Custom Button</Button> */}
+            
             
             {/* RIGHT */}
             <div className="flex items-center gap-4">
